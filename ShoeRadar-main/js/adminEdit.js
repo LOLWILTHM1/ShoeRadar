@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 3. Event Listener: Update Data Global Sepatu
   document
     .getElementById("editProductForm")
-    .addEventListener("submit", async () => {
+    .addEventListener("submit", async (e) => {
+      e.preventDefault();
       const name = document.getElementById("shoeName").value.trim();
       const category = document.getElementById("shoeCategory").value.trim();
       const price = Number(document.getElementById("shoePrice").value);
@@ -75,7 +76,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 4. Event Listener: Update Stok Inventory
   document
     .getElementById("inventoryForm")
-    .addEventListener("submit", async () => {
+    .addEventListener("submit", async (e) => {
+      e.preventDefault();
       const store_id = document.getElementById("storeSelect").value;
       const stock_quantity = Number(
         document.getElementById("storeStock").value,
